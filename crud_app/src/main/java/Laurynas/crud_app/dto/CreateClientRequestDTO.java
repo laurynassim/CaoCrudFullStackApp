@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,6 +15,8 @@ public class CreateClientRequestDTO {
     private String email;
     private int age;
 
+    private LocalDate dateOfBirth;
+
     @Override
     public String toString() {
         return "CreateClientRequestDTO{" +
@@ -20,6 +24,7 @@ public class CreateClientRequestDTO {
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +
+                ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
 }
