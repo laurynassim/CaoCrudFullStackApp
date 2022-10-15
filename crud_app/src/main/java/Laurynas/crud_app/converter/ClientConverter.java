@@ -30,6 +30,7 @@ public class ClientConverter {
             client.setName(requestDTO.getName());
             client.setSurname(requestDTO.getSurname());
             client.setAge(requestDTO.getAge());
+            client.setDateOfBirth(requestDTO.getDateOfBirth());
 
         }
         return client;
@@ -46,7 +47,7 @@ public class ClientConverter {
         if (isNewStringValueEmptyNullOrSameAsOld(requestDTO.getEmail(), client.getEmail())){
             client.setEmail(requestDTO.getEmail());
         }
-        if (isNewStringValueEmptyNullOrSameAsOldForDate(requestDTO.getDateOfBirth(), client.getDateOfBirth())){
+        if (isNewStringValueEmptyNullOrSameAsOld(requestDTO.getDateOfBirth(), client.getDateOfBirth())){
             client.setDateOfBirth(requestDTO.getDateOfBirth());
         }
         return client;
@@ -56,7 +57,7 @@ public class ClientConverter {
         return newValue != null && !newValue.isEmpty() && !newValue.equals(oldValue);
     }
 
-    private static boolean isNewStringValueEmptyNullOrSameAsOldForDate(LocalDate newValue, LocalDate oldValue){
-        return newValue != null  && !newValue.equals(oldValue);
-    }
+//    private static boolean isNewStringValueEmptyNullOrSameAsOldForDate(LocalDate newValue, LocalDate oldValue){
+//        return newValue != null  && !newValue.equals(oldValue);
+//    }
 }

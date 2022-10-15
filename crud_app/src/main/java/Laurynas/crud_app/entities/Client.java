@@ -30,7 +30,7 @@ public class Client {
     private String email;
 
     @Column
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
 
     @Transient
     private int age;

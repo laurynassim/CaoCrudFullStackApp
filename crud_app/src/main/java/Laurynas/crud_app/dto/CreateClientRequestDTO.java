@@ -15,7 +15,7 @@ public class CreateClientRequestDTO {
     private String email;
     private int age;
 
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
 
     @Override
     public String toString() {

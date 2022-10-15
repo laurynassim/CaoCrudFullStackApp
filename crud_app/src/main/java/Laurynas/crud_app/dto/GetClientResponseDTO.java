@@ -17,7 +17,7 @@ public class GetClientResponseDTO {
     private String name;
     private String surname;
     private String email;
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
     private int age;
 
 }
