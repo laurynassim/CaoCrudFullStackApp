@@ -1,10 +1,14 @@
 package Laurynas.crud_app.entities;
 
+import Laurynas.crud_app.services.ClientService;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 
 @Getter
@@ -26,5 +30,9 @@ public class Client {
     private String email;
 
     @Column
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
+
+    @Transient
+    private int age;
+
 }

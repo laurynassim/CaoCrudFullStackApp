@@ -15,6 +15,7 @@ public class ClientConverter {
             clientDTO.setDateOfBirth(client.getDateOfBirth());
             clientDTO.setName(client.getName());
             clientDTO.setSurname(client.getSurname());
+            clientDTO.setAge(client.getAge());
         }
         return clientDTO;
     }
@@ -25,6 +26,7 @@ public class ClientConverter {
             client.setEmail(requestDTO.getEmail());
             client.setName(requestDTO.getName());
             client.setSurname(requestDTO.getSurname());
+            client.setAge(requestDTO.getAge());
 
         }
         return client;
