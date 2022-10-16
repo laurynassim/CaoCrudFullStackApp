@@ -76,7 +76,29 @@ const renderSaveButton = (form) => {
 
   div.appendChild(button);
   form.appendChild(div);
+
+  
 };
+
+const renderCancelButton = (form) => {
+  const div = document.createElement("div");
+  div.className = "actions";
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "btn btn-primary";
+  button.innerText = "cancel";
+
+  div.appendChild(button);
+  form.appendChild(div);
+
+  button.addEventListener("click", () =>
+    window.location.replace("../html/clientList.html")
+  );
+
+};
+
+
 
 const renderEditButtons = (form) => {
   const div = document.createElement("div");
@@ -108,7 +130,8 @@ export const renderSaveClientForm = async (targetId) => {
   renderInputField(form, "surname", "surname");
   renderInputField(form, "email", "email");
   renderInputField(form, "dateOfBirth", "dateOfBirth");
-  renderSaveButton(form);
+  renderSaveButton(form),
+  renderCancelButton(form);
 
   await handleClientFormSubmit(form);
   document.getElementById(formParentDivId).appendChild(form);
