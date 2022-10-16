@@ -4,6 +4,7 @@ export const getAllClients = async () => {
   const response = await fetch(`${API_BASE_URL}/client
   `);
   const clients = await response.json();
+  console.log(clients)
   return clients;
 };
 
