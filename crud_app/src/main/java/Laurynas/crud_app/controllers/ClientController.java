@@ -65,4 +65,10 @@ public class ClientController {
         }
         return ResponseEntity.ok(convertClientToGetClientResponseDTO(client));
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteOwnerById(@PathVariable(name ="id") Long id){
+        this.clientService.deleteClientById(id);
+        return ResponseEntity.ok().build();
+    }
 }
