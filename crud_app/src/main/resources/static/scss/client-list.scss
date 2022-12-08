@@ -1,0 +1,43 @@
+@use "./navigation.scss" ;
+
+body {
+
+    width: 60%;
+    margin: 0 auto;
+
+    #clientContainer{
+        margin-top: 1rem;
+
+        table{
+            
+            thead{
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            tbody{
+              
+                font-size: 1rem;
+                text-align: center;
+                
+                tr{
+                    background-color:lightblue;
+                    margin-top: 0.5rem;
+                    font-family: 'Roboto', sans-serif;
+                    margin-bottom: 1rem;
+                    td{
+                        .editButton{
+                            margin-right: 0.5rem;
+                            background-color: #0d6efd; 
+                            color: white;
+                        }
+                    }
+                    
+                }
+
+            }
+
+            
+        }
+    }
+}
